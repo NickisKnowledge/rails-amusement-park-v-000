@@ -1,0 +1,22 @@
+<div>
+  <h1>Sign In</h1>
+</div>
+
+
+<div>
+  <%= form_for @user, url: signin_path do |f| %>
+  <% if @user.errors.any? %>
+    <div>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><strong><%= message %></strong></li>
+        <% end %>
+       </ul>
+    </div>
+  <% end %>
+
+    <%= f.text_field :name, placeholder: 'Name' %><br /><br />
+    <%= f.password_field :password, placeholder: 'Password' %><br /><br />
+    <%= f.submit 'Sign In'%>
+  <% end %>
+</div>

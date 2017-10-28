@@ -1,0 +1,15 @@
+
+<div>
+  <%= form_for @attraction do |f| %>
+    <%= f.text_field :name, placeholder: 'Name' %><br /><br />
+    <%= f.number_field :min_height, placeholder: 'Minimum height requirement' %>
+      <br /><br />
+    <%= f.number_field :happiness_rating,
+      placeholder: 'Happiness rating (1-5)' %><br /><br />
+    <%= f.number_field :nausea_rating,
+      placeholder: 'Nauseous? rating (1-5)' %><br /><br />
+    <%= f.number_field :tickets,
+      placeholder: 'How many tickets to ride?' %><br /><br />
+    <%= f.submit %>
+  <% end %>
+</div>

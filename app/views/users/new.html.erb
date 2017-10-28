@@ -1,0 +1,20 @@
+<div>
+  <h1>SignUp!</h1></h1>
+</div>
+
+<div>
+  <%= form_for @user do |f| %>
+    <%= f.text_field :name, placeholder: 'Name' %><br /><br />
+    <%= f.password_field :password, placeholder: 'Password' %><br /><br />
+    <%= f.number_field :height, placeholder: 'Height in Inches' %><br /><br />
+    <%= f.number_field :happiness,
+      placeholder: 'Scale of happiness? (1-5)' %><br /><br />
+    <%= f.number_field :nausea,
+      placeholder: 'Scale of nauseous? (1-5)' %><br /><br />
+    <%= f.number_field :tickets,
+      placeholder: 'Dollars on you' %><br /><br />
+    <%= f.label 'Check if your the owner: '%>
+    <%= f.check_box :admin %><br /><br />
+    <%= f.submit %>
+  <% end %>
+</div>
